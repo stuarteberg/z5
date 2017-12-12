@@ -14,15 +14,16 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   string: py{{py}}_{{PKG_BUILDNUM}}_g{{GIT_FULL_HASH[:7]}}
 
 
 requirements:
   build:
+    - cmake
     - python {{PY_VER}}*
     - cmake
-    - boost >=1.63.0
+    - boost 1.64.*
     - c-blosc
     - zlib
     - bzip2
@@ -30,7 +31,7 @@ requirements:
     - pybind11 >=2.2.1
   run:
     - python {{PY_VER}}*
-    - boost >=1.63.0
+    - boost 1.64.*
     - numpy # do not need to constrain np version
     - c-blosc
     - zlib
