@@ -27,8 +27,10 @@ requirements:
     - c-blosc
     - zlib
     - bzip2
+    - xtensor 0.14*
     - xtensor-python
     - pybind11 >=2.2.1
+
   run:
     - python {{PY_VER}}*
     - boost 1.64.*
